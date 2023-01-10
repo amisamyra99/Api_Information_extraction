@@ -16,7 +16,7 @@ ocr_result=tesseractOCR_img(denoised)
 
 print (ocr_result2)
 print(ocr_result)
-
+print('hello')
 
 
 
