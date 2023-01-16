@@ -34,13 +34,40 @@ def tesseractOCR_img(img):
 
 def Image_preprocessing_vehicule_license(img):
     filePath = img
-    result=img
+    result = img
     return result
 
 
 def Image_preprocessing_IDCARD(img):
     filePath = img
-    result=img
+    result = img
     return result
 
 
+# function to correct flipped images
+def flipped_image_correction(image):
+    return
+
+
+# function to detect if and image is an Id or license
+# by using python hashing
+def image_classification():
+    return
+
+
+# function to delete background of an image
+def remove_background(image):
+    # Convert the image to grayscale
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Apply Gaussian blur to the image to reduce noise
+    gray = cv2.GaussianBlur(gray, (5, 5), 0)
+
+    # Apply adaptive thresholding to the image
+    thresh = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
+
+    # Invert the image to get the foreground
+    thresh = cv2.bitwise_not(thresh)
+
+    # Return the foreground
+    return thresh
